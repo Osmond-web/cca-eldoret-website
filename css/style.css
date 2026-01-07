@@ -1,0 +1,205 @@
+/* Hero */
+.hero {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff; /* White background */
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #FFB6C1; /* Pinkish */
+  color: #ffffff;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+header p {
+  font-style: italic;
+  font-size: 1.2em;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+nav li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #FF0000; /* Red */
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #0000FF; /* Blue */
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+h3 {
+  color: #FFB6C1; /* Pinkish */
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+p, li {
+  margin-bottom: 10px;
+}
+
+a {
+  color: #FF0000; /* Red */
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  background-color: #FFB6C1; /* Pinkish */
+  margin: 40px 0;
+}
+
+/* Leadership Cards */
+.leadership-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 2px solid #FFB6C1; /* Pinkish */
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.circular-image {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  color: #0000FF; /* Blue */
+  margin-bottom: 10px;
+}
+
+/* Gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.gallery img, .gallery video {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+/* Form */
+form p {
+  margin-bottom: 15px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #FFB6C1; /* Pinkish */
+  border-radius: 5px;
+}
+
+input[type="submit"] {
+  background-color: #FF0000; /* Red */
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+input[type="submit"]:hover {
+  background-color: #0000FF; /* Blue */
+}
+
+/* Footer */
+footer {
+  background-color: #FFB6C1; /* Pinkish */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer a {
+  color: #ffffff;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .leadership-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .card {
+    width: 100%;
+    max-width: 300px;
+  }
+  nav li {
+    display: block;
+    margin: 10px 0;
+  }
+}
