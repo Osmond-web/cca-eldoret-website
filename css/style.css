@@ -124,6 +124,26 @@ hr {
   transform: translateY(-5px);
 }
 
+/* Large card variant */
+.card.card-lg {
+  width: 300px;
+}
+
+.card.card-lg .circular-image {
+  width: 130px;
+  height: 130px;
+}
+
+/* Extra large card variant */
+.card.card-xl {
+  width: 350px;
+}
+
+.card.card-xl .circular-image {
+  width: 160px;
+  height: 160px;
+}
+
 .circular-image {
   width: 100px;
   height: 100px;
