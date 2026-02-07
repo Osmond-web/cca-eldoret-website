@@ -212,41 +212,60 @@ King'ong'o pastorate</li>
     <section id="ministries" aria-labelledby="ministries-heading">
       <h2 id="ministries-heading">Our Ministries</h2>
 
-      <p>At CCA Church, every believer has a place to belong and a
-role to play. Our ministries help people grow spiritually, build
-relationships, and serve our community.</p>
+      <p>At CCA Church, every believer has a place to belong and a role to play. Our ministries help people grow spiritually, build relationships, and serve our community.</p>
 
-      <h3>Children's Ministry</h3>
-      <p>Safe, fun, and Christ-centered environment. Age-based
-classes, songs, and Bible memory programs.</p>
-      <p><a href="#contact">Learn More / Volunteer</a></p>
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleDropdown()">Select a Ministry ▼</button>
+        <div id="ministryDropdown" class="dropdown-content">
+          <a href="#ministry-children" onclick="showMinistry('children')">Children's Ministry</a>
+          <a href="#ministry-youth" onclick="showMinistry('youth')">Youth Ministry</a>
+          <a href="#ministry-women" onclick="showMinistry('women')">Women's Ministry</a>
+          <a href="#ministry-men" onclick="showMinistry('men')">Men's Ministry</a>
+          <a href="#ministry-worship" onclick="showMinistry('worship')">Worship & Choir</a>
+          <a href="#ministry-outreach" onclick="showMinistry('outreach')">Community Outreach & Missions</a>
+          <a href="#ministry-media" onclick="showMinistry('media')">Media & Tech</a>
+        </div>
+      </div>
 
-      <h3>Youth Ministry</h3>
-      <p>Teen and young adult fellowship, Bible studies, mentorship,
-leadership training, youth camps and conferences.</p>
-      <p><a href="#events">Join Youth Events</a></p>
+      <div id="ministry-content" style="margin-top: 20px;">
+        <div id="children" class="ministry-item" style="display:none;">
+          <h3>Children's Ministry</h3>
+          <p>Safe, fun, and Christ-centered environment. Age-based classes, songs, and Bible memory programs.</p>
+          <p><a href="#contact">Learn More / Volunteer</a></p>
+        </div>
+        <div id="youth" class="ministry-item" style="display:none;">
+          <h3>Youth Ministry</h3>
+          <p>Teen and young adult fellowship, Bible studies, mentorship, leadership training, youth camps and conferences.</p>
+          <p><a href="#events">Join Youth Events</a></p>
+        </div>
+        <div id="women" class="ministry-item" style="display:none;">
+          <h3>Women's Ministry</h3>
+          <p>Bible studies, prayer fellowships, support groups for mothers, workshops and retreats.</p>
+          <p><a href="#contact">Learn More / Volunteer</a></p>
+        </div>
+        <div id="men" class="ministry-item" style="display:none;">
+          <h3>Men's Ministry</h3>
+          <p>Discipleship, leadership development, prayer breakfasts and community mentorship programs.</p>
+          <p><a href="#contact">Learn More / Volunteer</a></p>
+        </div>
+        <div id="worship" class="ministry-item" style="display:none;">
+          <h3>Worship & Choir</h3>
+          <p>Choir, band, praise team; training for singers and instrumentalists; worship nights & concerts.</p>
+          <p><a href="#contact">Learn More / Volunteer</a></p>
+        </div>
+        <div id="outreach" class="ministry-item" style="display:none;">
+          <h3>Community Outreach & Missions</h3>
+          <p>Food drives, medical camps, school support, evangelism, and partnerships with NGOs.</p>
+          <p><a href="#contact">Get Involved</a></p>
+        </div>
+        <div id="media" class="ministry-item" style="display:none;">
+          <h3>Media & Tech</h3>
+          <p>Live streaming, video production, sound & lighting, website, photography and social media.</p>
+          <p><a href="#contact">Get Involved</a></p>
+        </div>
+      </div>
 
-      <h3>Women's Ministry</h3>
-      <p>Bible studies, prayer fellowships, support groups for
-mothers, workshops and retreats.</p>
-
-      <h3>Men's Ministry</h3>
-      <p>Discipleship, leadership development, prayer breakfasts and
-community mentorship programs.</p>
-
-      <h3>Worship & Choir</h3>
-      <p>Choir, band, praise team; training for singers and
-instrumentalists; worship nights & concerts.</p>
-
-      <h3>Community Outreach & Missions</h3>
-      <p>Food drives, medical camps, school support, evangelism, and
-partnerships with NGOs.</p>
-
-      <h3>Media & Tech</h3>
-      <p>Live streaming, video production, sound & lighting, website,
-photography and social media.</p>
-
-      <p><a href="#contact">Get Involved</a></p>
+      <p style="margin-top: 20px;"><a href="#contact">Get Involved</a></p>
     </section>
 
     <hr />
@@ -481,6 +500,34 @@ reserved.</p>
 
     <p><a href="#top">Back to top</a></p>
   </footer>
+
+  <script>
+    function toggleDropdown() {
+      const dropdown = document.getElementById('ministryDropdown');
+      dropdown.classList.toggle('show');
+    }
+
+    function showMinistry(id) {
+      // Hide all ministry items
+      const items = document.querySelectorAll('.ministry-item');
+      items.forEach(item => item.style.display = 'none');
+
+      // Show selected ministry
+      document.getElementById(id).style.display = 'block';
+
+      // Close dropdown
+      document.getElementById('ministryDropdown').classList.remove('show');
+    }
+
+    // Close dropdown when clicking outside
+    window.onclick = function(event) {
+      const dropdown = document.getElementById('ministryDropdown');
+      const btn = document.querySelector('.dropdown-btn');
+      if (!event.target.matches('.dropdown-btn') && dropdown.classList.contains('show')) {
+        dropdown.classList.remove('show');
+      }
+    }
+  </script>
 
 </body>
 </html>
