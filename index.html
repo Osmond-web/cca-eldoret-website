@@ -91,115 +91,61 @@ here.
     <hr />
 
     <!-- ABOUT -->
-    <section id="about" aria-labelledby="about-heading">
+        <section id="about" aria-labelledby="about-heading">
       <h2 id="about-heading">About CCA Church Eldoret Area</h2>
 
-      <h3>Our Story</h3>
-      <p>
-        CCA Church Eldoret Area was founded in **** with a small group
-of believers led by Archbishop Dr. Mathews Abednego Ajuoga with one
-vision
-        – to create a Christ-centered community that welcomes all.
-Over the years, God has grown us into a vibrant church family of
-worshippers,
-        servant leaders, and missionaries reaching beyond the walls of
-our sanctuary.
-      </p>
+      <div class="dropdown">
+        <button class="dropdown-btn" onclick="toggleAboutDropdown()">Select About Topic </button>
+        <div id="aboutDropdown" class="dropdown-content">
+          <a href="#about-story" onclick="showAboutTopic('story')">Our Story</a>
+          <a href="#about-mission" onclick="showAboutTopic('mission')">Mission</a>
+          <a href="#about-vision" onclick="showAboutTopic('vision')">Vision</a>
+          <a href="#about-values" onclick="showAboutTopic('values')">Core Values</a>
+          <a href="#about-leadership" onclick="showAboutTopic('leadership')">Leadership Team</a>
+        </div>
+      </div>
 
-      <h3>Mission</h3>
-      <p><em>To lead people into a growing relationship with Jesus
-Christ by teaching God’s Word, worshipping together, and serving our
-community.</em></p>
+      <div id="about-content" style="margin-top: 20px;">
+        <div id="story" class="about-item" style="display:none;">
+          <h3>Our Story</h3>
+          <p>
+            CCA Church Eldoret Area was founded in **** with a small group of believers led by Archbishop Dr. Mathews Abednego Ajuoga with one vision  to create a Christ-centered community that welcomes all. Over the years, God has grown us into a vibrant church family of worshippers, servant leaders, and missionaries reaching beyond the walls of our sanctuary.
+          </p>
+        </div>
 
-      <h3>Vision</h3>
-      <p><em>To be a church that transforms lives, strengthens
-families, and impacts the world with the love of Christ.</em></p>
+        <div id="mission" class="about-item" style="display:none;">
+          <h3>Mission</h3>
+          <p><em>To lead people into a growing relationship with Jesus Christ by teaching God's Word, worshipping together, and serving our community.</em></p>
+        </div>
 
-      <h3>Core Values</h3>
-      <ul>
-        <li>Faith — God’s Word is our foundation.</li>
-        <li>Love — Compassion for people.</li>
-        <li>Family — Nurturing relationships and community.</li>
-        <li>Service — Reaching out to meet real needs.</li>
-        <li>Mission — Sharing the gospel locally and globally.</li>
-      </ul>
+        <div id="vision" class="about-item" style="display:none;">
+          <h3>Vision</h3>
+          <p><em>To be a church that transforms lives, strengthens families, and impacts the world with the love of Christ.</em></p>
+        </div>
 
-      <h3>Leadership Team</h3>
-      <ul>
-        <li><strong>Area in-Charge – Rev. Prof. Peter Odera Ajuoga</strong><br/>Rev has
-served for over...; he teaches with clarity and passion.</li>
-        <li><strong>Assistant area in-charge</strong><br/>incharge of
-Kipkaren pastorate</li>
-        <li><strong>Assistant area in-charge</strong><br/>incharge of
-King'ong'o pastorate</li>
-      </ul>
-     
-<section id="leadership" aria-labelledby="leadership-heading">
-  <h2 id="leadership-heading">Church Leadership</h2>
+        <div id="values" class="about-item" style="display:none;">
+          <h3>Core Values</h3>
+          <ul>
+            <li>Faith  God's Word is our foundation.</li>
+            <li>Love  Compassion for people.</li>
+            <li>Family  Nurturing relationships and community.</li>
+            <li>Service  Reaching out to meet real needs.</li>
+            <li>Mission  Sharing the gospel locally and globally.</li>
+          </ul>
+        </div>
 
-  <div class="leadership-cards">
-    <div class="card card-xl">
-      <img src="images/Founding Father.png" alt="Archbishop Dr. Mathews Abednego Ajuoga" class="circular-image">
-      <h4>Founding Father  Archbishop. Dr. Mathews Abednego Ajuoga</h4>
-      <p>Archbishop Dr. Mathews Abednego Ajuoga is the founding father of CCA-hera.</p>
-    </div>
-    <div class="card card-lg">
-      <img src="images/archbishop.jpg" alt="Archbishop" class="circular-image">
-      <h4>Archbishop</h4>
-      <p>Add description for Archbishop.</p>
-    </div>
-    <div class="card card-lg">
-      <img src="images/Area in-charge.jpg" alt="Rev. Prof. Peter Odera Ajuoga" class="circular-image">
-      <h4>Area In-Charge – Rev. Prof. Peter Odera Ajuoga</h4>
-      <p>Provides spiritual oversight and leadership across the Eldoret Area.</p>
-    </div>
-    <div class="card">
-      <img src="images/ICT Chairman.jpg" alt="Assistant Area In-Charge  Kipkaren Pastorate" class="circular-image">
-      <h4>Assistant Area In-Charge  Kipkaren Pastorate</h4>
-      <p>Oversees pastoral work and ministry coordination at Kipkaren.</p>
-    </div>
-    <div class="card">
-      <img src="images/Min Ji.jpg" alt="Assistant Area In-Charge  King'ong'o Pastorate" class="circular-image">
-      <h4>Assistant Area In-Charge  King'ong'o Pastorate</h4>
-      <p>Supports ministry growth and discipleship in King'ong'o.</p>
-    </div>
-    <div class="card">
-      <img src="images/secretary.jpg" alt="Secretary of the Area" class="circular-image">
-      <h4>Secretary of the Area</h4>
-      <p>Add description for Secretary of the Area.</p>
-    </div>
-    <div class="card">
-      <img src="images/treasurer.jpg" alt="Treasurer" class="circular-image">
-      <h4>Treasurer</h4>
-      <p>Add description for Treasurer.</p>
-    </div>
-    <div class="card">
-      <img src="images/women_chairlady.jpg" alt="Women Chairlady" class="circular-image">
-      <h4>Women Chairlady</h4>
-      <p>Add description for Women Chairlady.</p>
-    </div>
-    <div class="card">
-      <img src="images/sunday_school_teacher.jpg" alt="Sunday School Teacher" class="circular-image">
-      <h4>Sunday School Teacher</h4>
-      <p>Add description for Sunday School Teacher.</p>
-    </div>
-    <div class="card">
-      <img src="images/youth_chairman.jpg" alt="Youth Chairman" class="circular-image">
-      <h4>Youth Chairman</h4>
-      <p>Add description for Youth Chairman.</p>
-    </div>
-    <div class="card">
-      <img src="images/youth_chairlady.jpg" alt="Youth Chairlady" class="circular-image">
-      <h4>Youth Chairlady</h4>
-      <p>Add description for Youth Chairlady.</p>
-    </div>
-    <div class="card">
-      <img src="images/min_ji.jpg" alt="Min Ji" class="circular-image">
-      <h4>Min Ji</h4>
-      <p>Add description for Min Ji.</p>
-    </div>
-  </div>
-</section>
+        <div id="leadership" class="about-item" style="display:none;">
+          <h3>Leadership Team</h3>
+          <ul>
+            <li><strong>Area in-Charge  Rev. Prof. Peter Odera Ajuoga</strong><br/>Rev has served for over...; he teaches with clarity and passion.</li>
+            <li><strong>Assistant area in-charge</strong><br/>incharge of Kipkaren pastorate</li>
+            <li><strong>Assistant area in-charge</strong><br/>incharge of King'ong'o pastorate</li>
+          </ul>
+        </div>
+      </div>
+
+      <p style="margin-top: 20px;"><a href="#ministries">Explore Our Ministries</a></p>
+    </section>
 
      
 
@@ -519,18 +465,41 @@ reserved.</p>
       document.getElementById('ministryDropdown').classList.remove('show');
     }
 
+    function toggleAboutDropdown() {
+      const dropdown = document.getElementById('aboutDropdown');
+      dropdown.classList.toggle('show');
+    }
+
+    function showAboutTopic(id) {
+      // Hide all about items
+      const items = document.querySelectorAll('.about-item');
+      items.forEach(item => item.style.display = 'none');
+
+      // Show selected topic
+      document.getElementById(id).style.display = 'block';
+
+      // Close dropdown
+      document.getElementById('aboutDropdown').classList.remove('show');
+    }
+
     // Close dropdown when clicking outside
     window.onclick = function(event) {
-      const dropdown = document.getElementById('ministryDropdown');
+      const ministryDropdown = document.getElementById('ministryDropdown');
+      const aboutDropdown = document.getElementById('aboutDropdown');
       const btn = document.querySelector('.dropdown-btn');
-      if (!event.target.matches('.dropdown-btn') && dropdown.classList.contains('show')) {
-        dropdown.classList.remove('show');
+      
+      if (!event.target.matches('.dropdown-btn') && ministryDropdown && ministryDropdown.classList.contains('show')) {
+        ministryDropdown.classList.remove('show');
+      }
+      if (!event.target.matches('.dropdown-btn') && aboutDropdown && aboutDropdown.classList.contains('show')) {
+        aboutDropdown.classList.remove('show');
       }
     }
   </script>
 
 </body>
 </html>
+
 
 
 
