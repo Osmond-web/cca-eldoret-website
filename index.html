@@ -19,6 +19,22 @@ rel="stylesheet">
 </head>
 <body>
 
+  <!-- Welcome Popup Modal -->
+  <div id="welcomeModal" class="modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="closeWelcomeModal()">&times;</span>
+      <div class="welcome-message">
+        <h2 id="welcomeGreeting">Good Morning!</h2>
+        <p><strong>Welcome to CCA Church Eldoret Area</strong></p>
+        <p><em>"Faith | Family | Purpose"</em></p>
+        <p style="font-size: 0.95em; margin-top: 15px;">A message from <strong>Rev. Prof. Peter Odera Ajuoga</strong>, Area In-Charge:</p>
+        <p style="font-style: italic; color: #0000FF;">
+          "We are so glad you found us! CCA Church is a Christ-centered community that exists to love God, love people, and make disciples. Whether you are exploring faith, returning after time away, or looking for a spiritual family – you are welcome here. Come as you are, and experience God's grace with us."
+        </p>
+      </div>
+    </div>
+  </div>
+
   <!-- Header / Navigation -->
   <header>
     <h1 id="top">CHURCH OF CHRIST IN AFRICA-ELDORET AREA</h1>
@@ -448,6 +464,35 @@ reserved.</p>
   </footer>
 
   <script>
+    // Welcome Modal Functions
+    function getGreeting() {
+      const hour = new Date().getHours();
+      if (hour < 12) return 'Good Morning!';
+      if (hour < 18) return 'Good Afternoon!';
+      return 'Good Evening!';
+    }
+
+    function showWelcomeModal() {
+      const modal = document.getElementById('welcomeModal');
+      const greeting = document.getElementById('welcomeGreeting');
+      greeting.textContent = getGreeting();
+      modal.style.display = 'flex';
+
+      // Auto-close after 7 seconds
+      setTimeout(() => {
+        closeWelcomeModal();
+      }, 7000);
+    }
+
+    function closeWelcomeModal() {
+      const modal = document.getElementById('welcomeModal');
+      modal.style.display = 'none';
+    }
+
+    // Show welcome modal on page load
+    window.addEventListener('load', showWelcomeModal);
+
+    // Ministry Dropdown Functions
     function toggleDropdown() {
       const dropdown = document.getElementById('ministryDropdown');
       dropdown.classList.toggle('show');
